@@ -99,8 +99,8 @@ int main(int argc, char* argv[]){
     }
 
     /* Test that push fails when full */
-    if(!queue_push(&q, payload_in[0])
-       == QUEUE_FAILURE){
+    if(!(queue_push(&q, payload_in[0])
+       == QUEUE_FAILURE)){
 	fprintf(stderr,
 		"error: queue_push did not fail"
 		" when full!\n");
